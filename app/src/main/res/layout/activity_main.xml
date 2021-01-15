@@ -1,82 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/name_text"
-        style="@style/NameStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<layout>
 
-    <EditText
-        android:id="@+id/nickname_edit"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/what_is_your_nickname"
-        style="@style/NameStyle"
-        android:textAlignment="center"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_text" />
-
-    <Button
-        android:id="@+id/done_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/done"
-        android:layout_marginTop="@dimen/layout_margin"
-        android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@+id/nickname_edit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/nickname_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/NameStyle"
-        android:text=""
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/done_button"/>
-
-    <ImageView
-        android:id="@+id/star_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/layout_margin"
-        android:contentDescription="@string/yellow_star"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nickname_text"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/star_image">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/bio_text"
+            android:id="@+id/name_text"
             style="@style/NameStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:lineSpacingMultiplier="@dimen/line_spacing"
-            android:paddingStart="@dimen/padding"
-            android:paddingEnd="@dimen/padding"
-            android:text="@string/bio" />
-    </ScrollView>
+            android:text="@string/name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/nickname_edit"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/what_is_your_nickname"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:fontFamily="@font/roboto"
+            android:text="@string/done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_edit" />
+
+        <TextView
+            android:id="@+id/nickname_text"
+            style="@style/NameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/done_button" />
+
+        <ImageView
+            android:id="@+id/star_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:contentDescription="@string/yellow_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_text"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/star_image">
+
+            <TextView
+                android:id="@+id/bio_text"
+                style="@style/NameStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="@dimen/line_spacing"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:text="@string/bio" />
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
